@@ -1,0 +1,43 @@
+[tool.poetry]
+name = "fintrack"
+version = "0.1.0"
+description = "Financial tracker for personal finance"
+authors = ["Sumit Arora <singhsays@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+click = "^8.1.7"
+dacite = "^1.8.1"
+loguru = "^0.7.2"
+ofxtools = "^0.9.5"
+
+[tool.poetry.scripts]
+fintrack = 'fintrack:cli'
+
+[tool.poetry.group.extras.dependencies]
+ruff = "^0.0.289"
+pytest = "^7.4.2"
+pytest-clarity = "^1.0.1"
+pytest-icdiff = "^0.7"
+asyncio = "^3.4.3"
+coverage = "^7.3.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+select = [
+    "E",    # pycodestyle
+    "W",    # pycodestyle
+    "F",    # pyflakes
+    "I001", # isort
+    "UP",   # pyupgrade
+]
+
+[tool.pytest.ini_options]
+minversion = "7.4"
+norecursedirs = [".git", ".venv", "fintrack/data/web/*"]
+testpaths = ["tests"]
+markers = ["focus: run a single test with the focus marker."]

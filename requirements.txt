@@ -1,0 +1,21 @@
+asyncio==3.4.3
+click==8.1.7
+dacite==1.8.1
+# Editable Git install (fintrack==0.1.0) with either a deleted local remote or invalid URI:
+# '/usr/local/git/git-google/etc/submodule_dogfood_config'
+-e /Users/sumeets/workspace/src/fintrack
+icdiff==2.0.7
+iniconfig==2.0.0
+loguru==0.7.2
+markdown-it-py==3.0.0
+mdurl==0.1.2
+ofxtools==0.9.5
+packaging==23.1
+pluggy==1.3.0
+pprintpp==0.4.0
+Pygments==2.16.1
+pytest==7.4.2
+pytest-clarity==1.0.1
+pytest-icdiff==0.7
+rich==13.5.2
+ruff==0.0.289
